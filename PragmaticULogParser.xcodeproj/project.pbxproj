@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22F647FA1F3DC15800B40D88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F647F91F3DC15800B40D88 /* main.swift */; };
+		22F648041F3DC18400B40D88 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F648001F3DC18400B40D88 /* main.swift */; };
+		22F648051F3DC18400B40D88 /* ULogParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F648011F3DC18400B40D88 /* ULogParser.swift */; };
+		22F648061F3DC18400B40D88 /* ULogFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F648021F3DC18400B40D88 /* ULogFormat.swift */; };
+		22F648071F3DC18400B40D88 /* ULogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F648031F3DC18400B40D88 /* ULogMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,10 @@
 
 /* Begin PBXFileReference section */
 		22F647F61F3DC15800B40D88 /* PragmaticULogParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PragmaticULogParser; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F647F91F3DC15800B40D88 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		22F648001F3DC18400B40D88 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		22F648011F3DC18400B40D88 /* ULogParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ULogParser.swift; sourceTree = "<group>"; };
+		22F648021F3DC18400B40D88 /* ULogFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ULogFormat.swift; sourceTree = "<group>"; };
+		22F648031F3DC18400B40D88 /* ULogMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ULogMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,10 @@
 		22F647ED1F3DC15800B40D88 = {
 			isa = PBXGroup;
 			children = (
+				22F648001F3DC18400B40D88 /* main.swift */,
+				22F648011F3DC18400B40D88 /* ULogParser.swift */,
+				22F648021F3DC18400B40D88 /* ULogFormat.swift */,
+				22F648031F3DC18400B40D88 /* ULogMessage.swift */,
 				22F647F81F3DC15800B40D88 /* PragmaticULogParser */,
 				22F647F71F3DC15800B40D88 /* Products */,
 			);
@@ -57,7 +67,6 @@
 		22F647F81F3DC15800B40D88 /* PragmaticULogParser */ = {
 			isa = PBXGroup;
 			children = (
-				22F647F91F3DC15800B40D88 /* main.swift */,
 			);
 			path = PragmaticULogParser;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 					22F647F51F3DC15800B40D88 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7DR7SL32UW;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,7 +131,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F647FA1F3DC15800B40D88 /* main.swift in Sources */,
+				22F648071F3DC18400B40D88 /* ULogMessage.swift in Sources */,
+				22F648041F3DC18400B40D88 /* main.swift in Sources */,
+				22F648061F3DC18400B40D88 /* ULogFormat.swift in Sources */,
+				22F648051F3DC18400B40D88 /* ULogParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,8 +234,11 @@
 		22F647FE1F3DC15800B40D88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7DR7SL32UW;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -230,7 +246,9 @@
 		22F647FF1F3DC15800B40D88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7DR7SL32UW;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
